@@ -52,27 +52,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         $view->headTitle()->setSeparator(' - ');
         $view->headTitle('Wear and Walk');
 
-//        $view->admin = Zend_Registry::get('username');
+        $view->admin = Zend_Registry::get('username');
     }
 
-//    protected function _initLayout() {
-//        $layout = explode('/', $_SERVER['REQUEST_URI']);
-//
-//        if (in_array('admin', $layout)) {
-//            echo 'aaaaaaaaaaaaaaaaaaaa';
-//            $layout_dir = 'admin';
-//        } else {
-//            echo 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb';
-//            $layout_dir = 'layout';
-//        }
-////
-//        $options = array(
-//            'layout' => $layout_dir,
-//            'layoutPath' => APPLICATION_PATH . "/layouts/scripts/" . $layout_dir,
-//        );
-//        print_r($options);
-////
-//        Zend_Layout::startMvc($options);
-//    }
 }
 
