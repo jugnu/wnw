@@ -1,0 +1,49 @@
+<?php echo $this->doctype(); ?>
+<html>
+    <head>
+        <?php echo $this->headMeta(); ?>   
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink()->prependStylesheet($this->baseUrl() . '/css/admin.css'); ?>
+    </head>
+    <body>
+        <div id="container">
+            <?php //$this->partial('_header.php',array());?>
+            
+            <div id="navigation">
+                <ul>
+                    <li><a href="<?php echo $this->url(array('controller'=>'categories','action'=>'index'));?>">Categories</a></li>
+                    <li><a href="<?php echo $this->url(array('controller'=>'products','action'=>'index'));?>">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div id="content-container1">
+                <div id="content-container2">
+                    <div id="section-navigation">
+                        <div align="centre">
+                            <?php //echo $this->navigation(); ?>
+                        </div>
+                    </div>
+                    <div id="content">
+
+                        <h2>
+                            <div><?php echo $this->title; ?></div>
+                        </h2>
+                        <?php echo $this->layout()->content; ?>
+
+                    </div>
+                    <div id="aside">
+                        <h3>
+                            Aside heading
+                        </h3>
+
+                    </div>
+                    <div id="footer">
+                        Copyright © Site name, 20XX
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

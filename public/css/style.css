@@ -1,0 +1,278 @@
+/* CSS Document */
+
+body{
+	padding:0px;
+	margin:0px;
+	background-image:url(../images/bg_page.jpg);
+}
+
+#wrapper{
+	width:990px;
+	margin:0px auto;	
+}
+
+#header{
+	height:120px;	
+}
+
+#header .topbar{
+	padding:5px;
+}
+
+#header .menubar{
+	padding:5px;
+}
+
+#header .logo{
+	width:150px;	
+}
+
+#menu{
+	width:300px;
+	padding:5px 0px 0px 40px;	
+}
+
+#searchbox{
+	padding:5px;
+	background-color:#DDD;
+	width:200px;
+	height:20px;
+	margin-top:10px;		
+}
+
+#loginbox{
+	width:140px;
+	padding-top:5px;
+}
+
+#searchicon{
+	padding:3px 10px;
+	border-left:1px solid #FFF;	
+}
+
+#breadcrumbs{
+	background-color:#00ADEE;	
+}
+
+#bcrumbs-txt{
+	padding:0px 10px;	
+}
+
+#canvas{
+	padding:20px;
+	background-color:#EEE;	
+}
+
+#canvas .menu{
+	width:140px;
+	padding:10px;
+	background-color:#FFF;	
+}
+
+#canvas .products{
+	padding:10px;
+	background-color:#FFF;
+	margin-left:20px;
+	width:740px;
+}
+
+.productimage{
+	width:130px;
+	height:130px;
+	border-bottom:1px solid #DDD;	
+}
+
+.productname{
+	text-align:center;
+	padding:5px;	
+}
+
+.productbox{
+	margin:2px 8px;	
+}
+
+#paginate{
+	background-color:#09F;
+	padding:0px 10px;
+	margin-right:10px;
+	margin-top:30px;	
+}
+
+
+#footer{
+	padding:30px 10px;
+	margin-top:100px;	
+}
+
+#footer .left{
+	width:400px;	
+}
+
+#footer .right{
+	width:300px;	
+}
+
+.redtube{
+	padding:5px;
+	background-color:#C30;	
+}
+
+/* lists */
+
+.hor-list-basic{		
+	padding:0px;
+	margin:0px;
+	list-style-type:none;
+}
+
+.hor-list-basic li{
+	line-height:25px;
+	float:left;
+	margin:5px;	
+}
+
+
+.menu-list{
+	padding:0px;
+	margin:0px;
+	list-style-type:none;		
+}
+
+.menu-list li{
+	float:left;
+	margin:5px;	
+}
+
+
+.submenu-list{
+	padding:0px;
+	margin:0px;
+	list-style-type:none;		
+}
+
+.submenu-list li{
+	margin:5px;
+	padding:6px 0px;
+	border-bottom:1px solid #3CF;	
+}
+
+
+.paginate-list{
+	padding:0px;
+	margin:0px;
+	list-style-type:none;	
+}
+
+.paginate-list li{
+	margin:5px;
+	float:left;
+	padding:2px;	
+}
+
+/* typography */
+
+.txt-black11, .txt-black11 a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#000;
+	text-decoration:none;
+}
+
+.txt-white11, .txt-white11 a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#FFF;
+	text-decoration:none;	
+}
+
+.txt-litegray11, .txt-litegray11 a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#EEE;	
+}
+
+.txt-litegray11, .txt-litegray11 a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#EEE;	
+}
+
+.txt-darkgray11, .txt-darkgray11 a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#555;
+}
+
+.txt-litegray12, .txt-litegray12 a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#DDD;
+	text-decoration:none;	
+	
+}
+
+.txt-litegray12 a:hover{
+	color:#FFF;
+}
+
+.txt-blue24{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:24px;
+	color:#00ADEE;
+	text-decoration:none;	
+}
+
+.txt-gray24{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:24px;
+	color:#AAA;
+	text-decoration:none;	
+}
+
+.txt-blue14{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#00ADEE;
+	text-decoration:none;	
+}
+
+/* forms */
+
+.search-input{
+	padding:2px;
+	border:0px;
+	background-color:transparent;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#222;	
+}
+
+/* support */
+
+.a-left{
+	float:left;	
+}
+
+.a-right{
+	float:right;	
+}
+
+.c-left{
+	clear:left;	
+}
+
+.c-right{
+	clear:right;	
+}
+
+.clear{
+	clear:both;	
+}
+
+.pad10top{
+	padding-top:10px;	
+}
+
+.pad5{
+	padding:5px;	
+}
