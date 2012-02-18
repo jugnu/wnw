@@ -7,12 +7,12 @@
     </head>
     <body>
         <div id="container">
-            <?php //$this->partial('_header.php',array());?>
-            
+            <?php echo $this->render('_admin_header.phtml'); ?>
+
             <div id="navigation">
                 <ul>
-                    <li><a href="<?php echo $this->url(array('controller'=>'categories','action'=>'index'));?>">Categories</a></li>
-                    <li><a href="<?php echo $this->url(array('controller'=>'products','action'=>'index'));?>">Products</a></li>
+                    <li><a href="<?php echo $this->url(array('controller' => 'categories', 'action' => 'index')); ?>">Categories</a></li>
+                    <li><a href="<?php echo $this->url(array('controller' => 'products', 'action' => 'index')); ?>">Products</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact us</a></li>
@@ -38,9 +38,6 @@
                             Aside heading
                         </h3>
 
-                    </div>
-                    <div id="footer">
-                        Copyright © Site name, 20XX
                     </div>
                 </div>
             </div>
