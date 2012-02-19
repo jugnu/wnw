@@ -38,6 +38,8 @@ class Admin_Model_Category extends Zend_Db_Table_Abstract {
             return $category[0]['cat_name'];
         }
     }
+    
+    
 
 }
 

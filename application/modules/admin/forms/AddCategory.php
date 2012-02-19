@@ -7,7 +7,7 @@ class Admin_Form_AddCategory extends Zend_Form {
         $category = new Admin_Model_Category();
         $data = $category->getCategories();
         $select = new Zend_Form_Element_Select('category');
-        $select->setRequired(TRUE);
+
         $select->setLabel('Choose Parent Category');
         $select->addMultiOption('0', 'Parent');
         foreach ($data as $val) {
@@ -16,7 +16,7 @@ class Admin_Form_AddCategory extends Zend_Form {
 
         $name = new Zend_Form_Element_Text('name');
         $name->setLabel('Category name');
-        $name->setRequired(TRUE);
+        
 
         $login = new Zend_Form_Element_Submit('submit');
         $login->setLabel('Add');

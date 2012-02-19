@@ -81,6 +81,7 @@
             <controllerFile controllerName="Categories">
               <actionMethod actionName="index"/>
               <actionMethod actionName="add"/>
+              <actionMethod actionName="confirmation"/>
             </controllerFile>
           </controllersDirectory>
           <formsDirectory>
@@ -111,6 +112,9 @@
               </viewControllerScriptsDirectory>
               <viewControllerScriptsDirectory forControllerName="Categories">
                 <viewScriptFile forActionName="add"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Categories">
+                <viewScriptFile forActionName="confirmation"/>
               </viewControllerScriptsDirectory>
             </viewScriptsDirectory>
             <viewHelpersDirectory/>
