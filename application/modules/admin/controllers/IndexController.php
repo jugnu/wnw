@@ -11,6 +11,7 @@ class Admin_IndexController extends Zend_Controller_Action {
 
     public function indexAction() {
         $this->view->title = 'Home';
+        $this->view->headTitle('Admin-Home');
         // action body
     }
 

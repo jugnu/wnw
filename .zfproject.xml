@@ -78,13 +78,20 @@
               <actionMethod actionName="login"/>
               <actionMethod actionName="logout"/>
             </controllerFile>
+            <controllerFile controllerName="Categories">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="add"/>
+            </controllerFile>
           </controllersDirectory>
           <formsDirectory>
             <formFile formName="Login"/>
             <formFile formName="Loginform"/>
+            <formFile formName="AddCategory"/>
           </formsDirectory>
           <layoutsDirectory enabled="false"/>
-          <modelsDirectory/>
+          <modelsDirectory>
+            <modelFile modelName="Category"/>
+          </modelsDirectory>
           <viewsDirectory>
             <viewScriptsDirectory>
               <viewControllerScriptsDirectory forControllerName="Index">
@@ -98,6 +105,12 @@
               </viewControllerScriptsDirectory>
               <viewControllerScriptsDirectory forControllerName="Authentication">
                 <viewScriptFile forActionName="logout"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Categories">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Categories">
+                <viewScriptFile forActionName="add"/>
               </viewControllerScriptsDirectory>
             </viewScriptsDirectory>
             <viewHelpersDirectory/>

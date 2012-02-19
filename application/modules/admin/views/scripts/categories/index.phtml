@@ -1,0 +1,16 @@
+<h2>Categories</h2>
+<br />
+<a href="<?php echo $this->url(array('controller' => 'categories', 'action' => 'add')); ?>">+Add</a>
+<div>
+    <div>
+        <div><b>Category</b></div>
+    </div>
+    
+    <div>
+        <?php foreach ($this->cat as $value) {?>
+        <div><?php echo $value['cat_name']; ?></div>
+        <?php } ?>
+    </div>
+
+
+</div>
