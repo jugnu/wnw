@@ -4,9 +4,7 @@ class Admin_AuthenticationController extends Zend_Controller_Action {
 
     public function init() {
         /* Initialize action controller here */
-//        if (Zend_Auth::getInstance()->hasIdentity()) {
-//            $this->_redirect('/admin/index');
-//        }
+//        
     }
 
     public function indexAction() {
@@ -15,6 +13,9 @@ class Admin_AuthenticationController extends Zend_Controller_Action {
     }
 
     public function loginAction() {
+        if (Zend_Auth::getInstance()->hasIdentity()) {
+            $this->_redirect('/admin/index');
+        }
 
         $this->_helper->layout()->disableLayout();
 

@@ -1,0 +1,41 @@
+<br/>
+
+<a href="<?php echo $this->url(array('controller' => 'products', 'action' => 'add')); ?>">+Add</a>
+<br/>
+<br/>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Category</th>
+        <th>Name</th>
+        <th>Material</th>
+        <th>Price</th>
+        <th>discounted-price</th>
+        <th>Active</th>
+        <th>Units-in-Stock</th>
+        <th>Colors</th>
+        <th>Sizes</th>
+    </tr>
+
+    <?php foreach ($this->products as $data) { ?>
+        <tr>
+            <td><?php echo $data['product']['id']; ?></td>
+            <td><?php echo $data['category']; ?></td>
+            <td><?php echo $data['product']['title']; ?></td>
+            <td><?php echo $data['product']['material']; ?></td>
+            <td><?php echo $data['product']['unitPrice']; ?></td>
+            <td><?php echo $data['product']['discountPrice']; ?></td>
+            <td><?php echo $data['product']['is_active']; ?></td>
+            <td><?php echo $data['product']['units_in_stock']; ?></td>
+            <td><?php foreach ($data['color'] as $color) {
+        echo $color['color_name'];
+    } ?></td>
+            <td><?php foreach ($data['size'] as $size) {
+        echo $size['size'];
+    } ?></td>
+
+
+        </tr>
+<?php } ?>
+
+</table>

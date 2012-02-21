@@ -3,17 +3,17 @@
 class Admin_Model_Category extends Zend_Db_Table_Abstract {
 
     protected $_name = 'categories';
-//    protected $_dependentTables = array('Admin_Model_Product');
+    protected $_dependentTables = array('Admin_Model_Product');
 
-    protected $_referenceMap = array(
-        'category' => array(
-            'columns' => array('parent_id'),
-            'refTableClass' => 'Admin_Model_Category',
-            'refColumns' => array('id'),
-            'onDelete' => self::CASCADE,
-            'onUpdate' => self::RESTRICT
-        )
-    );
+//    protected $_referenceMap = array(
+//        'category' => array(
+//            'columns' => array('parent_id'),
+//            'refTableClass' => 'Admin_Model_Category',
+//            'refColumns' => array('id'),
+//            'onDelete' => self::CASCADE,
+//            'onUpdate' => self::RESTRICT
+//        )
+//    );
 
     public function getCategories() {
 
