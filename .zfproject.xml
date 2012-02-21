@@ -86,12 +86,14 @@
             <controllerFile controllerName="Products">
               <actionMethod actionName="index"/>
               <actionMethod actionName="add"/>
+              <actionMethod actionName="confirmation"/>
             </controllerFile>
           </controllersDirectory>
           <formsDirectory>
             <formFile formName="Login"/>
             <formFile formName="Loginform"/>
             <formFile formName="AddCategory"/>
+            <formFile formName="AddProduct"/>
           </formsDirectory>
           <layoutsDirectory enabled="false"/>
           <modelsDirectory>
@@ -129,6 +131,9 @@
               </viewControllerScriptsDirectory>
               <viewControllerScriptsDirectory forControllerName="Products">
                 <viewScriptFile forActionName="add"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Products">
+                <viewScriptFile forActionName="confirmation"/>
               </viewControllerScriptsDirectory>
             </viewScriptsDirectory>
             <viewHelpersDirectory/>

@@ -32,6 +32,32 @@ class Admin_ProductsController extends Zend_Controller_Action {
     }
 
     public function addAction() {
+        $this->view->title = 'Add Product';
+        $form = new Admin_Form_AddProduct();
+
+        $request = $this->getRequest();
+        if ($request->isPost()) {
+            if ($form->isValid($_POST)) {
+                $product = new Admin_Model_Product();
+                $date = new Zend_Date();
+
+                $row = $product->createRow($form->getValues());
+                $current_date = $date->get(Zend_Date::ISO_8601);
+                $row->created_on = $current_date;
+                $row->updated_on = $current_date;
+                if ($row->save()) {
+                    $this->view->message = "Congratulations !";
+                    $this->_forward('confirmation');
+                }
+            }
+        }
+
+        $form->setMethod('post');
+        $form->setAction(Zend_Controller_Front::getInstance()->getBaseUrl() . '/admin/products/add');
+        $this->view->form = $form;
+    }
+
+    public function confirmationAction() {
         // action body
     }
 
