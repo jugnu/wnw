@@ -39,11 +39,16 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         ///// defining view helpers to use in our layout/////
         $this->bootstrap('layout');
         $layout = $this->getResource('layout');
-
-
-
         $view = $layout->getView();
 
+        $view->setHelperPath(APPLICATION_PATH, '/helpers', '');
+        
+//        $view->addHelperPath("ZendX/JQuery/View/Helper", "ZendX_JQuery_View_Helper");
+//        $view->jQuery()->addStylesheet('/js/jquery/css/ui-lightness/jquery-ui-1.8.17.custom')
+//                ->setLocalPath('/js/jquery/js/jquery-1.7.1.min.js')
+//                ->setUiLocalPath('/js/jquery/js/jquery-ui-1.8.17.custom.min.js');
+
+        ZendX_JQuery::enableView($view);
         $view->doctype('HTML4_STRICT');
 
         $view->headMeta()->appendHttpEquiv('content-type', 'text/html;cahrset=utf-8')

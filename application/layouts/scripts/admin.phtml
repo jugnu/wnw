@@ -4,6 +4,17 @@
         <?php echo $this->headMeta(); ?>   
         <?php echo $this->headTitle(); ?>
         <?php echo $this->headLink()->prependStylesheet($this->baseUrl() . '/css/admin.css'); ?>
+        <?php
+        if ($this->jquery()->isEnabled()) {
+            
+            $this->jquery()->setLocalPath($this->baseUrl().'js/jquery/js/jquery-1.7.1.min.js')
+                    ->setUiLocalPath($this->baseUrl().'js/jquery/js/jquery-ui-1.8.17.custom.min.js')
+                    ->addStylesheet($this->baseUrl().'js/jquery/css/ui-lightness/jquery-ui-1.8.17.custom');
+            echo $this->jquery();
+        }
+//        echo $this->jQuery(); 
+
+        ?>
     </head>
     <body>
         <div id="container">
@@ -12,7 +23,7 @@
             <div id="navigation">
                 <ul>
                     <li><a href="<?php echo $this->url(array('controller' => 'categories', 'action' => 'index')); ?>">Categories</a></li>
-                    <li><a href="<?php echo $this->url(array('controller' => 'products','action' => 'index')); ?>">Products</a></li>
+                    <li><a href="<?php echo $this->url(array('controller' => 'products', 'action' => 'index')); ?>">Products</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Contact us</a></li>
@@ -22,7 +33,7 @@
                 <div id="content-container2">
                     <div id="section-navigation">
                         <div align="centre">
-                            <?php //echo $this->navigation(); ?>
+                            <?php //echo $this->navigation();  ?>
                         </div>
                     </div>
                     <div id="content">

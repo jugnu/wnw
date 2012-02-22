@@ -50,6 +50,8 @@ class Admin_Form_AddProduct extends Zend_Form {
             '1' => 'featured'
         ));
         
+       
+        
 
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setLabel('Add');

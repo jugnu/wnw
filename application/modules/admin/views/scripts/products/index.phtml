@@ -1,5 +1,8 @@
 <br/>
+Pick your Date: <?php echo $this->datePicker("dp1", '', array('defaultDate' => date('Y/m/d', time()))); ?>
 
+
+<div id="container"></div>
 <a href="<?php echo $this->url(array('controller' => 'products', 'action' => 'add')); ?>">+Add</a>
 <br/>
 <br/>
@@ -17,7 +20,7 @@
         <th>Sizes</th>
     </tr>
 
-    <?php foreach ($this->products as $data) { ?>
+    <?php foreach ($this->paginator as $data) { ?>
         <tr>
             <td><?php echo $data['product']['id']; ?></td>
             <td><?php echo $data['category']; ?></td>
@@ -27,15 +30,22 @@
             <td><?php echo $data['product']['discountPrice']; ?></td>
             <td><?php echo $data['product']['is_active']; ?></td>
             <td><?php echo $data['product']['units_in_stock']; ?></td>
-            <td><?php foreach ($data['color'] as $color) {
+            <td><?php
+    foreach ($data['color'] as $color) {
         echo $color['color_name'];
-    } ?></td>
-            <td><?php foreach ($data['size'] as $size) {
-        echo $size['size'];
-    } ?></td>
+    }
+        ?></td>
+            <td><?php
+            foreach ($data['size'] as $size) {
+                echo $size['size'];
+            }
+        ?></td>
 
 
         </tr>
-<?php } ?>
+    <?php } ?>
 
 </table>
+<br/>
+<br/>
+<?php echo $this->paginationControl($this->paginator, 'sliding', '_pagination.phtml'); ?>

@@ -27,8 +27,11 @@ class Admin_ProductsController extends Zend_Controller_Action {
 
             $i++;
         }
-
-        $this->view->products = $result;
+        
+        $paginator = new Zend_Paginator(new Zend_Paginator_Adapter_Array($result));
+        $paginator->setItemCountPerPage('1')
+                ->setCurrentPageNumber($this->_getParam('page', '1'));
+        $this->view->paginator = $paginator;
     }
 
     public function addAction() {
@@ -59,6 +62,7 @@ class Admin_ProductsController extends Zend_Controller_Action {
 
     public function confirmationAction() {
         // action body
+        echo 'aaaaaaaaaaaaaaaaaaaaa';
     }
 
 }
